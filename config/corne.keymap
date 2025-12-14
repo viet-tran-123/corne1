@@ -80,7 +80,7 @@
             >;
         };
 
-        sym {
+        num-sym {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -97,14 +97,14 @@
 
         move {
             bindings = <
-&trans  &kp ESC   &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_UP      &kp PAGE_UP   &kp PAGE_DOWN  &kp UP_ARROW  &kp DEL    &kp BACKSPACE  &trans
-&trans  &kp TAB   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp HOME      &kp LEFT       &kp DOWN      &kp RIGHT  &kp END        &trans
-&trans  &kp CAPS  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans            &kp LS(LPAR)  &kp LS(RPAR)   &kp ENTER     &kp LBKT   &kp RBKT       &trans
-                                  &trans          &trans           &trans            &trans        &trans         &trans
+&trans  &kp ESC   &mkp MB1        &mmv MOVE_UP    &mkp MB2         &mkp MB4           &kp PAGE_UP   &kp PAGE_DOWN  &kp UP_ARROW  &kp DEL    &kp BACKSPACE  &trans
+&trans  &kp TAB   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5           &kp HOME      &kp LEFT       &kp DOWN      &kp RIGHT  &kp END        &trans
+&trans  &kp CAPS  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT    &kp LS(LPAR)  &kp LS(RPAR)   &kp ENTER     &kp LBKT   &kp RBKT       &trans
+                                  &trans          &trans           &mkp MB3           &trans        &trans         &trans
             >;
         };
 
-        bt {
+        f1-12+ps+l4 {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -112,14 +112,14 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp F1         &kp F2         &kp F3         &kp F4         &kp F5           &kp F6           &kp F7               &kp F8               &kp F9       &kp F10  &none
-&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &sk LEFT_WIN     &kp LBKT             &kp RBKT             &kp F11      &kp F12  &none
-&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &kp PRINTSCREEN  &kp LA(PRINTSCREEN)  &kp LC(PRINTSCREEN)  &kp LG(TAB)  &trans   &none
-                                     &trans         &trans         &trans           &trans           &trans               &trans
+&none  &kp F1        &kp F2         &kp F3         &kp F4         &kp F5          &kp F6           &kp F7               &kp F8               &kp F9       &kp F10  &none
+&none  &tog 4        &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_CLR      &sk LEFT_WIN     &kp LBKT             &kp RBKT             &kp F11      &kp F12  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &kp PRINTSCREEN  &kp LA(PRINTSCREEN)  &kp LC(PRINTSCREEN)  &kp LG(TAB)  &trans   &none
+                                    &trans         &trans         &trans          &trans           &trans               &trans
             >;
         };
 
-        layer_4 {
+        calculator {
             bindings = <
 &trans  &trans        &kp PG_UP  &kp UP        &kp PG_DN  &trans       &kp N7  &kp N8     &kp N9   &kp LS(PLUS)  &kp MINUS  &trans
 &trans  &kp HOME      &kp LEFT   &kp DOWN      &kp RIGHT  &kp END      &kp N4  &kp N5     &kp N6   &kp LS(STAR)  &kp FSLH   &trans
